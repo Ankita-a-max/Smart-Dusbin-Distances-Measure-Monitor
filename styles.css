@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #2e7d32;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+header h1 i {
+  margin-right: 10px;
+}
+
+.status-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.sensor-readings {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.reading {
+  text-align: center;
+  padding: 15px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.reading h2 {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+#status-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#status-indicator i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+#status-indicator.open {
+  color: #2e7d32;
+}
+
+#status-indicator.open i {
+  transform: translateY(-5px) rotate(-10deg);
+}
+
+#status-indicator.closed {
+  color: #757575;
+}
+
+#distance-value {
+  font-size: 28px;
+  font-weight: 500;
+  color: #333;
+}
+
+.last-update {
+  text-align: center;
+  color: #757575;
+  font-size: 14px;
+}
+
+.history-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.history-card h2 {
+  margin-bottom: 15px;
+  color: #2e7d32;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.history-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.history-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-status {
+  display: flex;
+  align-items: center;
+}
+
+.history-status i {
+  margin-right: 10px;
+}
+
+.history-status.open {
+  color: #2e7d32;
+}
+
+.history-status.closed {
+  color: #757575;
+}
+
+.history-time {
+  color: #757575;
+  font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #757575;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .sensor-readings {
+    flex-direction: column;
+  }
+  
+  .reading {
+    margin-bottom: 20px;
+  }
+}
